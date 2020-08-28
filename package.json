@@ -1,0 +1,55 @@
+{
+  "name": "hacktoberfestify",
+  "description": "Manage your Hacktoberfest issues!",
+  "version": "0.0.0",
+  "author": "Manuel Spigolon @Eomm",
+  "bin": {
+    "hacktoberfestify": "./bin/run"
+  },
+  "bugs": "https://github.com/Eomm/hacktoberfestify/issues",
+  "dependencies": {
+    "@oclif/command": "^1.8.0",
+    "@oclif/config": "^1.17.0",
+    "@oclif/plugin-help": "^3.2.0"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.22.2",
+    "@oclif/test": "^1.2.6",
+    "chai": "^4.2.0",
+    "globby": "^10.0.2",
+    "mocha": "^5.2.0",
+    "nyc": "^14.1.1",
+    "rimraf": "^3.0.2",
+    "standard": "^14.3.4"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
+    "/src"
+  ],
+  "homepage": "https://github.com/Eomm/hacktoberfestify",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "hacktoberfestify",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "Eomm/hacktoberfestify",
+  "scripts": {
+    "postpack": "rimraf oclif.manifest.json",
+    "prepack": "oclif-dev manifest && oclif-dev readme",
+    "lint:fix": "standard --env mocha --fix",
+    "test": "standard && nyc mocha --forbid-only \"test/**/*.test.js\"",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}
