@@ -21,6 +21,7 @@
     "chai": "^4.2.0",
     "globby": "^10.0.2",
     "mocha": "^5.2.0",
+    "nock": "^13.0.4",
     "nyc": "^14.1.1",
     "rimraf": "^3.0.2",
     "standard": "^14.3.4"
@@ -51,8 +52,9 @@
   "scripts": {
     "postpack": "rimraf oclif.manifest.json",
     "prepack": "oclif-dev manifest && oclif-dev readme",
+    "lint": "standard --env mocha",
     "lint:fix": "standard --env mocha --fix",
-    "test": "standard && nyc mocha --forbid-only \"test/**/*.test.js\"",
+    "test": "npm run lint && nyc mocha --forbid-only \"test/**/*.test.js\"",
     "version": "oclif-dev readme && git add README.md"
   }
 }

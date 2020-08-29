@@ -40,7 +40,7 @@ class AddLabelCommand extends Command {
   }
 }
 
-AddLabelCommand.description = 'Add the hacktoberfest label!'
+AddLabelCommand.description = 'Add the hacktoberfest label to any issues from your console!'
 
 AddLabelCommand.flags = {
   issue: flags.string({
@@ -57,7 +57,7 @@ AddLabelCommand.flags = {
   label: flags.string({
     char: 'l',
     description: 'customize the labels added to the issues',
-    // hidden: true,
+    hidden: true,
     multiple: true,
     default: ['hacktoberfest']
   })

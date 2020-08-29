@@ -28,26 +28,27 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`hacktoberfestify hello`](#hacktoberfestify-hello)
+* [`hacktoberfestify add`](#hacktoberfestify-add)
 * [`hacktoberfestify help [COMMAND]`](#hacktoberfestify-help-command)
 
-## `hacktoberfestify hello`
+## `hacktoberfestify add`
 
-Describe the command here
+Add the hacktoberfest label!
 
 ```
 USAGE
-  $ hacktoberfestify hello
+  $ hacktoberfestify add
 
 OPTIONS
-  -n, --name=name  name to print
+  -i, --issue=issue                    (required) issue to label
 
-DESCRIPTION
-  ...
-  Extra documentation goes here
+  -k, --envGithubToken=envGithubToken  [default: GITHUB_TOKEN] The ENV key where the GITHUB_TOKEN is stored or the token
+                                       itself
+
+  -l, --label=label                    [default: hacktoberfest] customize the labels added to the issues
 ```
 
-_See code: [src\commands\hello.js](https://github.com/Eomm/hacktoberfestify/blob/v0.0.0/src\commands\hello.js)_
+_See code: [src\commands\add.js](https://github.com/Eomm/hacktoberfestify/blob/v0.0.0/src\commands\add.js)_
 
 ## `hacktoberfestify help [COMMAND]`
 
