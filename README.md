@@ -81,7 +81,7 @@ name: hacktoberfestify
 
 on:
   issues:
-    types: opened
+    types: [opened]
 
 jobs:
   hacktoberfestify:
