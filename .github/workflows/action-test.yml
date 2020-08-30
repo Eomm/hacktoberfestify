@@ -2,7 +2,7 @@ name: hacktoberfestify
 
 on:
   issues:
-    type: opened
+    types: [opened, closed]
 
 jobs:
   hacktoberfestify:

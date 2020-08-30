@@ -13,7 +13,7 @@ inputs:
     required: true
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: ".github/action/Dockerfile"
   args:
     - ${{ inputs.token-env-name }}
     - ${{ inputs.issue }}
