@@ -23,7 +23,7 @@ $ npm install -g hacktoberfestify
 $ hacktoberfestify COMMAND
 running command...
 $ hacktoberfestify (-v|--version|version)
-hacktoberfestify/1.0.0 win32-x64 node-v12.2.0
+hacktoberfestify/1.0.1 win32-x64 node-v12.2.0
 $ hacktoberfestify --help [COMMAND]
 USAGE
   $ hacktoberfestify COMMAND
@@ -52,7 +52,7 @@ OPTIONS
   -r, --range=range                    [default: ] an issues' ids range inclusuve (39-100)
 ```
 
-_See code: [src\commands\add.js](https://github.com/Eomm/hacktoberfestify/blob/v1.0.0/src\commands\add.js)_
+_See code: [src\commands\add.js](https://github.com/Eomm/hacktoberfestify/blob/v1.0.1/src\commands\add.js)_
 
 ## `hacktoberfestify help [COMMAND]`
 
