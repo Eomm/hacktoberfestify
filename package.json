@@ -48,7 +48,10 @@
       "@oclif/plugin-help"
     ]
   },
-  "repository": "Eomm/hacktoberfestify",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eomm/hacktoberfestify.git"
+  },
   "scripts": {
     "postpack": "rimraf oclif.manifest.json",
     "prepack": "oclif-dev manifest && oclif-dev readme",
