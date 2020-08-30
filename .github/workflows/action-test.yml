@@ -2,7 +2,7 @@ name: hacktoberfestify
 
 on:
   issues:
-    types: [opened, closed]
+    types: [opened, reopened, closed]
 
 jobs:
   hacktoberfestify:
@@ -12,3 +12,5 @@ jobs:
       - uses: ./
         with:
           issue: ${{ github.event.issue.number }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.github_token }}

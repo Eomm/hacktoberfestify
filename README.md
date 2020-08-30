@@ -91,4 +91,6 @@ jobs:
       - uses: Eomm/hacktoberfestify@action-v1
         with:
           issue: ${{ github.event.issue.number }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.github_token }}
 ```
