@@ -74,4 +74,21 @@ _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.0
 
 # Action
 
-Work in progress
+You may use this CLI as a GitHub Action too!
+
+```
+name: hacktoberfestify
+
+on:
+  issues:
+    types: opened
+
+jobs:
+  hacktoberfestify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: Eomm/hacktoberfestify@action-v1
+        with:
+          issue: ${{ github.event.issue.number }}
+```

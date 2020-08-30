@@ -1,0 +1,19 @@
+name: "hacktoberfestify"
+description: "Manage your Hacktoberfest issues!"
+branding:
+  icon: "octagon"
+  color: "purple"
+inputs:
+  token-env-name:
+    description: 'The GITHUB_TOKEN secret key'
+    required: false
+    default: 'GITHUB_TOKEN'
+  issue:
+    description: 'The issue to label'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.token-env-name }}
+    - ${{ inputs.issue }}
