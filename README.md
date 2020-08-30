@@ -3,6 +3,7 @@ hacktoberfestify
 
 Manage your Hacktoberfest issues!
 
+[![Build Status](https://github.com/Eomm/hacktoberfestify/workflows/ci/badge.svg)](https://github.com/Eomm/hacktoberfestify/actions)
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/hacktoberfestify.svg)](https://npmjs.org/package/hacktoberfestify)
 [![Downloads/week](https://img.shields.io/npm/dw/hacktoberfestify.svg)](https://npmjs.org/package/hacktoberfestify)
@@ -33,19 +34,19 @@ USAGE
 
 ## `hacktoberfestify add`
 
-Add the hacktoberfest label!
+Add the hacktoberfest label to any issues from your console!
 
 ```
 USAGE
   $ hacktoberfestify add
 
 OPTIONS
-  -i, --issue=issue                    (required) issue to label
+  -i, --issue=issue                    [default: ] issue to label
 
   -k, --envGithubToken=envGithubToken  [default: GITHUB_TOKEN] The ENV key where the GITHUB_TOKEN is stored or the token
                                        itself
 
-  -l, --label=label                    [default: hacktoberfest] customize the labels added to the issues
+  -r, --range=range                    [default: ] an issues' ids range inclusuve (39-100)
 ```
 
 _See code: [src\commands\add.js](https://github.com/Eomm/hacktoberfestify/blob/v0.0.0/src\commands\add.js)_
