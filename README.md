@@ -14,6 +14,10 @@ Run this CLI from your repository working directory to add the ![hacktoberfest](
 <!-- toc -->
 * [Usage](#usage)
 * [Commands](#commands)
+<<<<<<< HEAD
+=======
+* [Action](#action)
+>>>>>>> master
 <!-- tocstop -->
 # Usage
 <!-- usage -->
@@ -22,7 +26,11 @@ $ npm install -g hacktoberfestify
 $ hacktoberfestify COMMAND
 running command...
 $ hacktoberfestify (-v|--version|version)
+<<<<<<< HEAD
 hacktoberfestify/0.0.0 win32-x64 node-v12.2.0
+=======
+hacktoberfestify/1.0.1 win32-x64 node-v12.2.0
+>>>>>>> master
 $ hacktoberfestify --help [COMMAND]
 USAGE
   $ hacktoberfestify COMMAND
@@ -51,7 +59,11 @@ OPTIONS
   -r, --range=range                    [default: ] an issues' ids range inclusuve (39-100)
 ```
 
+<<<<<<< HEAD
 _See code: [src\commands\add.js](https://github.com/Eomm/hacktoberfestify/blob/v0.0.0/src\commands\add.js)_
+=======
+_See code: [src\commands\add.js](https://github.com/Eomm/hacktoberfestify/blob/v1.0.1/src\commands\add.js)_
+>>>>>>> master
 
 ## `hacktoberfestify help [COMMAND]`
 

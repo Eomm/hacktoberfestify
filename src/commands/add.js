@@ -7,7 +7,11 @@ class AddLabelCommand extends Command {
   async run () {
     const { flags } = this.parse(AddLabelCommand)
 
+<<<<<<< HEAD
     const url = (await readPkgUp({ normalize: false })).packageJson.repository
+=======
+    const url = (await readPkgUp()).packageJson.repository.url
+>>>>>>> master
     const data = parseGitUrl(url)
     this.log(`Labeling ${data.repo}...`)
 
