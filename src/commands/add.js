@@ -9,6 +9,7 @@ class AddLabelCommand extends Command {
 
     const url = (await readPkgUp({ normalize: false })).packageJson.repository
     const data = parseGitUrl(url)
+    this.log(`Labeling ${data.repo}...`)
 
     const auth = process.env[flags.envGithubToken] || flags.envGithubToken
     const octokit = new Octokit({ auth })
