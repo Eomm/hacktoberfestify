@@ -3,6 +3,8 @@ hacktoberfestify
 
 Manage your Hacktoberfest issues!
 
+Run this CLI from your repository working directory to add the ![hacktoberfest](https://img.shields.io/static/v1?label=&message=hacktoberfest&color=ff69b4) label to any issues!
+
 [![Build Status](https://github.com/Eomm/hacktoberfestify/workflows/ci/badge.svg)](https://github.com/Eomm/hacktoberfestify/actions)
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/hacktoberfestify.svg)](https://npmjs.org/package/hacktoberfestify)
@@ -68,3 +70,7 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.0/src\commands\help.ts)_
 <!-- commandsstop -->
+
+# Action
+
+Work in progress
