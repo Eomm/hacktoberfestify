@@ -13,7 +13,12 @@ class AddLabelCommand extends Command {
     const auth = process.env[flags.envGithubToken] || flags.envGithubToken
     const octokit = new Octokit({ auth })
 
-    for await (const issueLabelled of addLabels(data, flags.issue, flags.label)) {
+    const issueList = flags.issue.concat(flags.range)
+    if (issueList.length === 0) {
+      this.error('Nothing to do')
+    }
+
+    for await (const issueLabelled of addLabels(data, issueList, flags.label)) {
       if (issueLabelled.error) {
         this.warn(`Issue ${issueLabelled.issueNumber} NOT labelled due error: ${issueLabelled.error.message}`)
       } else {
@@ -47,7 +52,20 @@ AddLabelCommand.flags = {
     char: 'i',
     description: 'issue to label',
     multiple: true,
-    required: true
+    required: false,
+    default: []
+  }),
+  range: flags.string({
+    char: 'r',
+    description: 'an issues\' ids range inclusuve (39-100)',
+    default: [],
+    parse: input => {
+      if (!/^\d+-\d+$/.test(input)) {
+        throw new Error(`Invalid range: ${input}`)
+      }
+      const nums = input.split('-').map(n => parseInt(n, 10)).sort()
+      return new Array((nums[1] + 1) - nums[0]).fill(0).map((_, i) => nums[0] + i)
+    }
   }),
   envGithubToken: flags.string({
     char: 'k',
