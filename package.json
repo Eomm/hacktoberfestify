@@ -1,11 +1,7 @@
 {
   "name": "hacktoberfestify",
   "description": "Manage your Hacktoberfest issues!",
-<<<<<<< HEAD
-  "version": "0.0.0",
-=======
   "version": "1.0.1",
->>>>>>> master
   "author": "Manuel Spigolon @Eomm",
   "bin": {
     "hacktoberfestify": "./bin/run"
@@ -52,14 +48,10 @@
       "@oclif/plugin-help"
     ]
   },
-<<<<<<< HEAD
-  "repository": "Eomm/hacktoberfestify",
-=======
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Eomm/hacktoberfestify.git"
   },
->>>>>>> master
   "scripts": {
     "postpack": "rimraf oclif.manifest.json",
     "prepack": "oclif-dev manifest && oclif-dev readme",
